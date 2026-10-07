@@ -31,11 +31,27 @@ public class MatchController {
 
     @PostMapping("/{matchID}/joinGame")
     public GameServer joinSession(@PathVariable String matchID) {
+        System.out.println("joining match: " + matchID);
         return gameServerRegistry.joinServer(matchID);
     }
 
     @PostMapping("/createGame")
     public GameServer createSession() {
+        System.out.println(".createGame callede");
         return gameServerRegistry.createServer();
     }
+
+    @PostMapping("/freeSession/{sessionGuid}")
+    public void freeSession(@PathVariable String sessionGuid)
+    {
+        System.out.println("freeing session: " + sessionGuid);
+        gameServerRegistry.unRegisterServer(sessionGuid);
+    }
+
+    @PostMapping("/{matchID}/leaveGame")
+    public void leaveSession(@PathVariable String matchID){
+        gameServerRegistry.leaveServer(matchID);
+
+    }
+
 }

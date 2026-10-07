@@ -32,4 +32,16 @@ public class GameServer {
     public void setCurrentPlayers(int currentPlayers) {
         this.currentPlayers = currentPlayers;
     }
+
+    public void setServerId(String serverId) {
+        this.serverId = serverId;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public void setMaxPlayers(int maxPlayers) {
+        this.maxPlayers = maxPlayers;
+    }
 }

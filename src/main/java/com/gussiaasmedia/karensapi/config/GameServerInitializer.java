@@ -17,16 +17,5 @@ public class GameServerInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
-        gameServerRegistry.registerServer(
-                new GameServer("server-001", 27777, 2)
-        );
-
-        gameServerRegistry.registerServer(
-                new GameServer("server-002", 27778, 2)
-        );
-
-        gameServerRegistry.registerServer(
-                new GameServer("server-003", 27779, 2)
-        );
     }
 }
