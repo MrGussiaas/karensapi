@@ -45,7 +45,7 @@ public class GameServerRegistry {
         }
 
         int nextAvailablePort = determineNextPort();
-        System.out.println("te next port is: " + determineNextPort());
+        System.out.println("te next port is: " + nextAvailablePort);
         if(nextAvailablePort <= 0){
             return null;
         }
